@@ -188,11 +188,14 @@ public class CallListenerService extends Service {
 
     public static String formatPhoneNumber(String phoneNum) {
         if (!TextUtils.isEmpty(phoneNum) && phoneNum.length() == 11) {
-            return phoneNum.substring(0, 3) + "-"
-                    + phoneNum.substring(3, 7) + "-"
+            return phoneNum.substring(0, 3)
+//                    + "-" + phoneNum.substring(3, 7) + "-"
+                    + "****"
                     + phoneNum.substring(7);
+        } else {
+            return phoneNum.substring(0,2) +"****";
         }
-        return phoneNum;
+//        return phoneNum;
     }
 
     @Override

@@ -1,41 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:text="Phone Call App"
-        android:textSize="28sp" />
+    <data>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_title"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="By aJIEw" />
+    </data>
 
-    <Switch
-        android:id="@+id/switch_default_phone_call"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
-        android:text="设为默认电话应用" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Switch
-        android:id="@+id/switch_call_listenr"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/switch_default_phone_call"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
-        android:text="开启电话监听服务" />
-</RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="第一步:" />
+
+            <Switch
+                android:id="@+id/switchPhoneCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="设为默认电话应用" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="第二步:" />
+
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:textColor="#000000"
+                android:text="缺少相关权限"
+                android:maxLines="5"
+                android:id="@+id/tvPermissionResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnRequestPermission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="申请" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="第三步:" />
+
+            <TextView
+                android:layout_marginStart="16dp"
+                android:maxLines="5"
+                android:textColor="#000000"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确认app权限管理中已开启：\n【锁屏显示】、【后台弹出界面】" />
+
+            <Button
+                android:id="@+id/btnOtherSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="查看" />
+
+        </LinearLayout>
+
+        <TextView
+            android:textSize="30dp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center_horizontal"
+            android:text="完成上述步骤，可以拨号"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Switch
+            android:id="@+id/switchListenCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/switchPhoneCall"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:text="开启电话监听服务"
+            android:visibility="gone" />
+
+
+        <EditText
+            android:layout_marginTop="40dp"
+            android:id="@+id/etPhone"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:hint="输入要拨打的手机号"
+            android:inputType="number"
+            tools:text="10010"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/btnTel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="拨打" />
+
+
+    </LinearLayout>
+</layout>
