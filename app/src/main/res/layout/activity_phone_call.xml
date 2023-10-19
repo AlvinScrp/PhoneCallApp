@@ -7,11 +7,15 @@
     android:orientation="vertical"
     tools:context=".phonecallui.PhoneCallActivity">
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/rl_user_info"
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:orientation="vertical"
+        android:gravity="center"
         android:background="@color/colorPrimaryDark">
+
+
 
         <TextView
             android:id="@+id/tv_call_number_label"
@@ -24,20 +28,40 @@
             android:textColor="@android:color/white"
             android:textSize="18sp" />
 
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@mipmap/ic_avatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_marginStart="12dp"
+                android:text="依云服饰-娜娜"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
 
         <TextView
             android:id="@+id/tv_call_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:layout_marginTop="10dp"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="28sp"
             android:textStyle="bold"
             android:layout_centerInParent="true"
-            tools:text="133-9527-9527" />
+            tools:text="133****9527" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
