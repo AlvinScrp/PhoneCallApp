@@ -38,7 +38,8 @@ class MainActivity : AppCompatActivity() {
         val number = "10010"
         binding.etPhone.setText(number)
         binding.etPhone.setSelection(number.length)
-        binding.btnTel.setOnClickListener { tel1() }
+        binding.btnTel.setOnClickListener { tel1(binding.etPhone.text.toString()) }
+        binding.btnCallNana.setOnClickListener { tel1("10010") }
         binding.btnRequestPermission.setOnClickListener { requestPermission() }
         binding.btnOtherSetting.setOnClickListener { permissionH.openAppSettings() }
         binding.switchPhoneCall.setOnClickListener { v: View? ->
@@ -66,9 +67,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun tel1() {
-        val et = findViewById<EditText>(R.id.etPhone)
-        val number = et.text.toString()
+    private fun tel1(number: String) {
         val intent = Intent()
         intent.setAction(Intent.ACTION_CALL)
         intent.setData(Uri.parse("tel:$number"))
