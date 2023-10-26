@@ -53,7 +53,7 @@ class CallLogObserver(private val context: Context, handler: Handler?) : Content
                 // 在这里处理通话记录信息
                 Log.d(TAG, "Call Type: $callType, Phone Number: $phoneNumber, Call Date: $callDate")
                 if (phoneNumber == curPhoneNumber) {
-                    context.contentResolver.delete(CallLog.Calls.CONTENT_URI, "NUMBER=$phoneNumber", null)
+//                    context.contentResolver.delete(CallLog.Calls.CONTENT_URI, "NUMBER=$phoneNumber", null)
                 }
             }
         }

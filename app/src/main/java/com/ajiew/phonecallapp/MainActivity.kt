@@ -39,7 +39,8 @@ class MainActivity : AppCompatActivity() {
         binding.etPhone.setText(number)
         binding.etPhone.setSelection(number.length)
         binding.btnTel.setOnClickListener { tel1(binding.etPhone.text.toString()) }
-        binding.btnCallNana.setOnClickListener { tel1("10010") }
+        binding.btnCallNana1.setOnClickListener { tel1("10010") }
+        binding.btnCallNana2.setOnClickListener { tel1("10010") }
         binding.btnRequestPermission.setOnClickListener { requestPermission() }
         binding.btnOtherSetting.setOnClickListener { permissionH.openAppSettings() }
         binding.switchPhoneCall.setOnClickListener { v: View? ->

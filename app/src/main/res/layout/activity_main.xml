@@ -116,45 +116,6 @@
             android:text="开启电话监听服务"
             android:visibility="gone" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:padding="12dp">
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@mipmap/ic_avatar" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:text="依云服饰-娜娜"
-                android:textSize="18sp" />
-
-            <Button
-                android:id="@+id/btnCallNana"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="电话联系TA" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="（演示）"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="OR"
-            android:textColor="#000000" />
 
         <LinearLayout
 
@@ -188,6 +149,94 @@
                 android:layout_marginTop="10dp"
                 android:text="拨打" />
         </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="OR"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/ic_avatar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="客户小A"
+                android:textSize="18sp" />
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"/>
+
+            <Button
+                android:id="@+id/btnCallNana1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电话联系TA" />
+
+
+        </LinearLayout>
+
+      <View
+          android:visibility="gone"
+          android:background="#eeeeee"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"/>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/ic_avatar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="客户小B"
+                android:textSize="18sp" />
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"/>
+
+            <Button
+                android:id="@+id/btnCallNana2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电话联系TA" />
+
+
+        </LinearLayout>
+
+        <View
+            android:background="#eeeeee"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
 
 
     </LinearLayout>
